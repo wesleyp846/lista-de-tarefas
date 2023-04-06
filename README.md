@@ -25,5 +25,7 @@ criado o arquivo TodoList.jsx. Nele a estrutura basica para um ola mundo e expor
 </br>
 
 `npm i` no terminal do [**VsCode**](https://code.visualstudio.com/) para instalar todas as dependencias </br>
-depois `npm rum dev` para criar um servidor local e vermos em temnpo real com esta a aplicação.
+depois `npm rum dev` para criar um servidor local e vermos em tempo real com esta a aplicação.
+![Capturar](https://user-images.githubusercontent.com/101286798/230487733-f4ec3894-59d6-4c9c-9001-42539b2d7b97.JPG)
+
 
