@@ -28,4 +28,7 @@ criado o arquivo TodoList.jsx. Nele a estrutura basica para um ola mundo e expor
 depois `npm rum dev` para criar um servidor local e vermos em tempo real com esta a aplicação.
 ![Capturar](https://user-images.githubusercontent.com/101286798/230487733-f4ec3894-59d6-4c9c-9001-42539b2d7b97.JPG)
 
+Criado os arquivos TodoList.jsx e TodoList.css, onde foram criados todo o codigo html estruturado da aplicação e no .css criado todo o estilo básico da aplicação
 
+![Capturar](https://user-images.githubusercontent.com/101286798/230507059-e76e50cb-05e7-4e6e-9118-f15d7e4b617d.JPG)
+![Capturar](https://user-images.githubusercontent.com/101286798/230507197-32b66f8e-c0e5-4c55-9a9c-efb8ecdaf185.JPG)
