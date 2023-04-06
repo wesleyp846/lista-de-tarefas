@@ -20,3 +20,10 @@ src com index.html, modificada a linha para chamar app.jsx ao invez de main.jsx<
 
 Finalizando limpeza com remoções de importações desnecessarias.
 ![Capturar](https://user-images.githubusercontent.com/101286798/230476409-9e2e6221-9c5b-43d4-8761-7e9f26676622.JPG)
+
+criado o arquivo TodoList.jsx. Nele a estrutura basica para um ola mundo e exportado para o app.jsx</br>
+</br>
+
+`npm i` no terminal do [**VsCode**](https://code.visualstudio.com/) para instalar todas as dependencias </br>
+depois `npm rum dev` para criar um servidor local e vermos em temnpo real com esta a aplicação.
+
