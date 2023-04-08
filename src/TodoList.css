@@ -132,6 +132,10 @@ button.deleteAll:hover{
     border-radius: 5px;
 }
 
+.icone-central{
+    max-width: 100%;
+}
+
 @media screen and (max-width: 600px) {
     form{
         width: 100%;
