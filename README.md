@@ -1,4 +1,5 @@
 ### Lista de tarefas
+Inspirado em https://www.linkedin.com/in/dimitri-teixeira/</br>
 Lista de Tarefas simples feita em [**React**](https://react.dev/)
 
 Após abertura de um prompt na pasta do projeto vazia.</br> 
