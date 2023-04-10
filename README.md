@@ -33,3 +33,5 @@ Criado os arquivos TodoList.jsx e TodoList.css, onde foram criados todo o codigo
 
 ![Capturar](https://user-images.githubusercontent.com/101286798/230507059-e76e50cb-05e7-4e6e-9118-f15d7e4b617d.JPG)
 ![Capturar](https://user-images.githubusercontent.com/101286798/230507197-32b66f8e-c0e5-4c55-9a9c-efb8ecdaf185.JPG)
+
+### Apartir dessa etapa o projeto foi maximamente comentado para facilitar o entendimento
