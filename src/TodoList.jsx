@@ -1,3 +1,10 @@
+/*5º feita importação import React from "react";
+e inserido o codigo pra ser reinderizado na tela
+function TodoList() {
+    return (<H1>Ola mundo!</H1>)
+}
+export default TodoList.jsx
+*/
 import React, { useState, useEffect } from "react";
 import './TodoList.css';
 import Icone from './assets/listavazia.png';  
@@ -40,6 +47,9 @@ function TodoList() {
     }
 
     return (
+        /*8º abaixo do return e feita a <div> que vai englobar todo o código
+        dentro dela o <H1>Lista de Tarefas</H1>
+        depois form e dentro o input*/
         <div>
             <h1>Lista de Tarefas</h1>
             <form onSubmit={adicionaItem}>
@@ -52,6 +62,19 @@ function TodoList() {
             </form>
             <div className="listaTarefas">
                 <div>
+                    {/*9º começou criando uma div class name "item"
+                    depois a span tarefa de exemplo p´ra poder ficar visual as funcionalidades
+                    e botão deletar.
+                    div item completo tambem foi feita
+                    <div class name="item">
+                    <span> Tarefa de exemplo</span>
+                    <button>Deletar</button>
+                    </div>
+                    <div class name="item comleto">
+                    <span> Tarefa de exemplo</span>
+                    <button>Deletar</button>
+                    </div>
+                    */}
                     {
                         lista.length < 1 
                         ? 

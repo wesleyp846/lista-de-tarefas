@@ -1,30 +1,47 @@
+/*6º importada a fonte roboto no google fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
+/*7º fundo do app e escolha da fonte no body*/
+body {
     background: #222435;
     font-family: 'Roboto', sans-serif;
 }
 
-*:focus{
+*:focus {
+    /*Sem linha de marcação ou realce*/
     outline: none;
 }
 
-h1{
+/*10º espeçura da fonte no h1 e escolha da  cor com centralização*/
+h1 {
     font-weight: 900;
     color: #7d83b9;
     text-align: center;
 }
 
-form{
+/*11º Ao usar display: flex;, você pode definir a direção em que os itens são colocados, a ordem em que aparecem, o espaçamento entre eles, o alinhamento e muito mais. Você pode até mesmo definir como os itens se comportam quando não há espaço suficiente para todos serem exibidos em uma única linha.
+position: Relative: voce pode alinhar os componetes que estão dentro dele no atributo absolute (caso do botão)
+vale nessa etapa por um backgrond pra visualiza o tamanho do componente*/
+form {
     display: flex;
     position: relative;
     width: 600px;
     height: 60px;
+    /*centralizou automatiicamente
+    e feita a etapa de media query
+    @media screen and (max-width 66px)
+    para tela de no maximo 600 pixels
+    ou seja, desse tamanho para baixo vale as configurações do media query
+    ali o form tem width de 100% (não haverá barra de rolagem, sempre ocupara o tamanho total da tela com menos de 600px)*/
     margin: 30px auto;
     margin-bottom: 60px;
 }
 
-input{
+/*12º width de 100% pra pegar a largura toda do form
+e feito a configuração de focus abaixo da parte do body
+para não ficar realçando o form quando a mouse estiver encima
+tira margem e aredondamento nos cantos só pra embelezar*/
+input {
     display: flex;
     width: 100%;
     height: 60px;
@@ -36,13 +53,17 @@ input{
     color: white;
 }
 
-button.add{
+button.add {
+    /*13º class name add para não confundir com outro botões 
+    atributo adsolute pra alterar a posição dentro do form */
     position: absolute;
+    /*top cola no teto e right cola na esqueda*/
     top: 0;
     right: 0;
     background: #363b65;
     border: none;
     color: white;
+    /*quando o mouse passa encima vira o icone de ponteiro*/
     cursor: pointer;
     padding: 10px 25px;
     height: 61px;
@@ -50,20 +71,32 @@ button.add{
     border-bottom-right-radius: 10px;
 }
 
-button.add:hover{
+/*configuração pra quando o mouse passa encima*/
+button.add:hover {
     color: white;
     background: #363f88;
 }
 
-.listaTarefas{
+/*14º onde ficarão todos os componetens que não fazem parte do form*/
+.listaTarefas {
+    /*justify-content: center; é uma propriedade CSS que é usada em conjunto com a propriedade display: flex;. Ela é usada para definir como os itens dentro de um "flex container" são alinhados no eixo principal.
+
+Quando você usa justify-content: center;, os itens são centralizados ao longo do eixo principal do container. O eixo principal é definido pelo valor da propriedade flex-direction, que pode ser row (horizontal) ou column (vertical).
+
+Esta propriedade pode ser útil para criar layouts flexíveis que exibem os itens centralizados horizontalmente ou verticalmente. Por exemplo, se você quiser centralizar um conjunto de elementos em uma linha horizontal, você pode definir o pai como um flex container com display: flex; e, em seguida, adicionar justify-content: center; para centralizar os elementos.
+
+A propriedade justify-content tem outros valores possíveis, como flex-start (alinhado no início do eixo principal), flex-end (alinhado no final do eixo principal), space-between (espaçado uniformemente com o primeiro item no início e o último item no final), space-around (espaçado uniformemente com espaço adicional distribuído uniformemente entre os itens), entre outros.*/
     display: flex;
     justify-content: center;
+    /*Por exemplo, você pode usar flex-flow: column wrap; em uma lista de itens para garantir que todos os itens sejam exibidos em uma única coluna, independentemente do tamanho da tela do usuário. E, se houver muitos itens, eles serão automaticamente agrupados em colunas adicionais.
+
+A propriedade flex-flow combina as propriedades flex-direction e flex-wrap, permitindo que você defina a direção e a quebra de linha em uma única declaração. Alguns outros valores possíveis incluem row wrap (itens organizados em uma única linha, quebrando para a próxima linha conforme necessário), row nowrap (itens organizados em uma única linha sem quebra), column nowrap (itens organizados em uma única coluna sem quebra), entre outros.*/
     flex-flow: column wrap;
     width: 600px;
     margin: auto;
 }
 
-.item{
+.item {
     display: flex;
     justify-content: space-between;
     border: 1px solid #363b65;
@@ -71,18 +104,18 @@ button.add:hover{
     cursor: pointer;
 }
 
-.item:hover{
+.item:hover {
     background: #151627;
 }
-
-.item span{
+/*span é a parte do texto*/
+.item span {
     width: 100%;
     color: white;
     margin-right: 10px;
     padding: 10px 15px;
 }
 
-.item.completo{
+.item.completo {
     display: flex;
     justify-content: space-between;
     background: #1e1f2e;
@@ -90,17 +123,19 @@ button.add:hover{
     margin-bottom: 10px;
     cursor: pointer;
 }
-
+/*span é a parte do texto*/
 .item.completo span {
     width: 100%;
     color: #4d506e;
     margin-right: 10px;
     padding: 10px 15px;
+    /*Riscar o texto*/
     text-decoration: line-through;
+    /*ficar meio apagado*/
     opacity: 0.4;
 }
 
-button.del{
+button.del {
     border: none;
     background: none;
     color: #4d506e;
@@ -108,7 +143,7 @@ button.del{
     cursor: pointer;
 }
 
-button.del:hover{
+button.del:hover {
     border: none;
     background: #ff004c;
     color: white;
@@ -116,7 +151,7 @@ button.del:hover{
     cursor: pointer;
 }
 
-button.deleteAll{
+button.deleteAll {
     border: 1px solid #ff004c;
     background: none;
     padding: 15px;
@@ -126,21 +161,22 @@ button.deleteAll{
     cursor: pointer;
 }
 
-button.deleteAll:hover{
-    background: #ff004c; 
-    color: white; 
+button.deleteAll:hover {
+    background: #ff004c;
+    color: white;
     border-radius: 5px;
 }
 
-.icone-central{
+.icone-central {
     max-width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-    form{
+    form {
         width: 100%;
     }
-    .listaTarefas{
+
+    .listaTarefas {
         width: 100%;
     }
 }
