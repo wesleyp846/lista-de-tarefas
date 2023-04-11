@@ -10,7 +10,8 @@ import './TodoList.css';
 import Icone from './assets/listavazia.png';  
 
 function TodoList() {
-    
+    /*P19 uma variavel para guardar o banco de dados do proprio navegador
+    guardado no localStorage.usando o metodo getitem e poem na lista */
     const listaStorage = localStorage.getItem('Lista');
     /*15º apos css
     import do useState acima
@@ -18,11 +19,19 @@ function TodoList() {
     variavel [nome da variavel, set e nome da variavel padrão pra setara lista] = useState([arrey porque são carios itens na lista])*/
     /*inicalmente fica const [lista, setLista] = useState([]);
     esse estado é responsavel por gardar os item que vão sendo adicionados*/
+    /*P19  validação para a lista não começar zerada
+    useState(listaStorage ? JSON.parse(listaStorage) : [])
+    useState sera(verifica se há historico de lista no bd do navegador
+        se sim  pega o Json e faz o parse, o parse converte texto para um objeto(e guara da como listastorage) se não
+        começa com vazio, no caso o arrey vazio)*/
     const [lista, setlista] = useState(listaStorage ? JSON.parse(listaStorage) : []);
     /*estado inicial começa vazio, usado no value do form*/
     const [novoItem, setNovoItem] = useState("");
 
     useEffect(()=>{
+        /*useEffect importado acima , funciona como u efeito colateral
+        (o que acontece se isso acontecer)
+        depois de chamar o useEffect e chama uma A.F. ou seja, quando ha uma mudança na lista ele que o efeito colateral entre chaves {ele vai pegar o localStorage.juntar com a lista(chave chamada lista, faz o parse pra tranformar num objeto JSON(o estado lista)},[o estado que eu quero monitorar])*/
        localStorage.setItem('Lista', JSON.stringify(lista)); 
     }, [lista])
     /*ainda P16 cria ela recebendo o (form)*/
@@ -42,20 +51,26 @@ function TodoList() {
         no documento.procure por id{id que vbai ser procurado} */
         document.getElementById('input-entrada').focus();
     }
-
+        /*função feita no passo 18 */
     function clicou(index) {
+        /*criada uma variavel listaaux para copiar o estado de lista atual*/
         const listaAux = [...lista];
+        /*pega essa lista auxiliar ve a posição do index, vai pegar o campo iscomplited
+        e agora vai dizer agora que o valor é ao contrario(se era false agora é true e vice versa) */
         listaAux[index].isCompleted = !listaAux[index].isCompleted;
+        /*Guarda a auteração da lista no estado da lista*/
         setlista(listaAux);
     }
-
+    /*repetição do pocesso acima para fazer a funcionalidade de delete*/
     function deleta(index){
         const listaAux = [...lista];
+        /*Splice metodo pra remover(passao indice do item, passa quantos vai remover) */
         listaAux.splice(index,1);
         setlista(listaAux)
     }
 
     function deletaTudo(){
+        /*pega o estado da lista e apaga tudo transfomando num arrey vazio */
         setlista([]);
     }
 
@@ -113,15 +128,26 @@ function TodoList() {
                         */
                         lista.map((item, index)=>(
                             <div
-                            key={index} 
+                            /*ainda no passo 18 vindo do span essa key alimenta o indice chamado na função abaixo*/
+                            key={index}
+                            /*P18 inicialmente className="item"
+                            modificado para ser feita uma validação.
+                            se o nosso item está completo então mostra item completo se não
+                            mostra item*/ 
                             className={item.isCompleted ? "item completo" : "item"}
                             >
+                                {/*inicialmente <span>{item.text}</span>
+                                criaremos o evento de clik com o onClik para marcar que a tarefa foi comleta
+                                A.F. chama a função clicou e passa o indice do item.*/}
                                 <span onClick={()=>{clicou(index)}}>{item.text}</span>
+                                {/*repetição do pocesso acima para fazer a funcionalidade de delete*/}
                                 <button onClick={()=>{deleta(index)}} className="del">Deletar</button>
                             </div> 
                         )) 
                     }
-                    {
+                    {   /*condicional para aparecer ou não o botão deleta todos
+                    o && simboliza se a condição for verdadeira o que fará
+                    assim chamará a função deleta tudo*/
                          lista.length > 0 && <button onClick={()=>{deletaTudo()}} className="deleteAll">Deletar todas</button>
                     }
                 </div>
