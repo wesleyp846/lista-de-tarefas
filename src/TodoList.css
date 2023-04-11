@@ -1,4 +1,4 @@
-/*6º importada a fonte roboto no google fontes*/
+/*6º importada a fonte roboto do google fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*7º fundo do app e escolha da fonte no body*/
@@ -8,7 +8,7 @@ body {
 }
 
 *:focus {
-    /*Sem linha de marcação ou realce*/
+/*Sem linha de marcação ou realce*/
     outline: none;
 }
 
@@ -20,27 +20,30 @@ h1 {
 }
 
 /*11º Ao usar display: flex;, você pode definir a direção em que os itens são colocados, a ordem em que aparecem, o espaçamento entre eles, o alinhamento e muito mais. Você pode até mesmo definir como os itens se comportam quando não há espaço suficiente para todos serem exibidos em uma única linha.
-position: Relative: voce pode alinhar os componetes que estão dentro dele no atributo absolute (caso do botão)
-vale nessa etapa por um backgrond pra visualiza o tamanho do componente*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+position: Relative: você pode alinhar os componetes que estão dentro dele no atributo absolute (caso do botão)
+--------------------------------------------------------------------------------------------------------------------------------------------
+Vale apena nessa etapa por um backgrond de cor destoante pra visualiza o tamanho do componente*/
 form {
     display: flex;
     position: relative;
     width: 600px;
     height: 60px;
-    /*centralizou automatiicamente
-    e feita a etapa de media query
-    @media screen and (max-width 66px)
-    para tela de no maximo 600 pixels
-    ou seja, desse tamanho para baixo vale as configurações do media query
-    ali o form tem width de 100% (não haverá barra de rolagem, sempre ocupara o tamanho total da tela com menos de 600px)*/
+/*Centralizou automáticamente
+--------------------------------------------------------------------------------------------------------------------------------------------
+E feita a etapa de media query
+@media screen and (max-width 66px)
+para tela de no máximo 600 pixels
+ou seja, desse tamanho para baixo vale as configurações do media query
+ali o form tem width de 100% (não haverá barra de rolagem, sempre ocupara o tamanho total da tela com menos de 600px)*/
     margin: 30px auto;
     margin-bottom: 60px;
 }
 
 /*12º width de 100% pra pegar a largura toda do form
-e feito a configuração de focus abaixo da parte do body
+e feito a configuração de focus lá na parte do body
 para não ficar realçando o form quando a mouse estiver encima
-tira margem e aredondamento nos cantos só pra embelezar*/
+tirada margem e  feito aredondamento nos cantos só pra embelezar*/
 input {
     display: flex;
     width: 100%;
@@ -54,16 +57,16 @@ input {
 }
 
 button.add {
-    /*13º class name add para não confundir com outro botões 
-    atributo adsolute pra alterar a posição dentro do form */
+/*13º class name add para não confundir com outro botões 
+atributo adsolute pra alterar a posição dentro do form */
     position: absolute;
-    /*top cola no teto e right cola na esqueda*/
+/*top cola no teto e right cola na esqueda*/
     top: 0;
     right: 0;
     background: #363b65;
     border: none;
     color: white;
-    /*quando o mouse passa encima vira o icone de ponteiro*/
+/*Quando o mouse passa encima vira o icone de ponteiro*/
     cursor: pointer;
     padding: 10px 25px;
     height: 61px;
@@ -71,7 +74,7 @@ button.add {
     border-bottom-right-radius: 10px;
 }
 
-/*configuração pra quando o mouse passa encima*/
+/*Configuração pra quando o mouse passa encima*/
 button.add:hover {
     color: white;
     background: #363f88;
@@ -79,7 +82,7 @@ button.add:hover {
 
 /*14º onde ficarão todos os componetens que não fazem parte do form*/
 .listaTarefas {
-    /*justify-content: center; é uma propriedade CSS que é usada em conjunto com a propriedade display: flex;. Ela é usada para definir como os itens dentro de um "flex container" são alinhados no eixo principal.
+/*justify-content: center; é uma propriedade CSS que é usada em conjunto com a propriedade display: flex;. Ela é usada para definir como os itens dentro de um "flex container" são alinhados no eixo principal.
 
 Quando você usa justify-content: center;, os itens são centralizados ao longo do eixo principal do container. O eixo principal é definido pelo valor da propriedade flex-direction, que pode ser row (horizontal) ou column (vertical).
 
@@ -88,7 +91,7 @@ Esta propriedade pode ser útil para criar layouts flexíveis que exibem os iten
 A propriedade justify-content tem outros valores possíveis, como flex-start (alinhado no início do eixo principal), flex-end (alinhado no final do eixo principal), space-between (espaçado uniformemente com o primeiro item no início e o último item no final), space-around (espaçado uniformemente com espaço adicional distribuído uniformemente entre os itens), entre outros.*/
     display: flex;
     justify-content: center;
-    /*Por exemplo, você pode usar flex-flow: column wrap; em uma lista de itens para garantir que todos os itens sejam exibidos em uma única coluna, independentemente do tamanho da tela do usuário. E, se houver muitos itens, eles serão automaticamente agrupados em colunas adicionais.
+/*Por exemplo, você pode usar flex-flow: column wrap; em uma lista de itens para garantir que todos os itens sejam exibidos em uma única coluna, independentemente do tamanho da tela do usuário. E, se houver muitos itens, eles serão automaticamente agrupados em colunas adicionais.
 
 A propriedade flex-flow combina as propriedades flex-direction e flex-wrap, permitindo que você defina a direção e a quebra de linha em uma única declaração. Alguns outros valores possíveis incluem row wrap (itens organizados em uma única linha, quebrando para a próxima linha conforme necessário), row nowrap (itens organizados em uma única linha sem quebra), column nowrap (itens organizados em uma única coluna sem quebra), entre outros.*/
     flex-flow: column wrap;
@@ -129,9 +132,9 @@ A propriedade flex-flow combina as propriedades flex-direction e flex-wrap, perm
     color: #4d506e;
     margin-right: 10px;
     padding: 10px 15px;
-    /*Riscar o texto*/
+/*Riscar o texto*/
     text-decoration: line-through;
-    /*ficar meio apagado*/
+/*Ficar meio apagado*/
     opacity: 0.4;
 }
 
