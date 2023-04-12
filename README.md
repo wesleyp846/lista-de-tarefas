@@ -35,3 +35,18 @@ Criado os arquivos TodoList.jsx e TodoList.css, onde foram criados todo o codigo
 ![Capturar](https://user-images.githubusercontent.com/101286798/230507197-32b66f8e-c0e5-4c55-9a9c-efb8ecdaf185.JPG)
 
 ### Apartir dessa etapa o projeto foi maximamente comentado para facilitar o entendimento
+
+##
+
+# Alguns passos tomados para criar o projeto.
+
+No 2º passo após a limpesa do projeto faremos alterações no index.html
+
+<li>Modificar linguagem
+<li>Apagar `<link rel="icon" type="image/svg+xml" href="/vite.svg"`
+<li>Foi trocado a chamada do `src="/src/Main.jsx` para `src="/src/App.jsx"`
+<li>3º Modificado o titulo
+
+
+
+
