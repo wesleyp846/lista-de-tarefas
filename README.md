@@ -1,3 +1,5 @@
+# Projeto em pausa
+
 ### Lista de tarefas
 Inspirado em https://www.linkedin.com/in/dimitri-teixeira/</br>
 Lista de Tarefas simples feita em [**React**](https://react.dev/)
